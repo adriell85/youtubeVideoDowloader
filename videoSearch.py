@@ -4,7 +4,8 @@ import youtube_dl
 import os
 
 #where to save
-SAVE_PATH = "videos_dowloadeds/" #to_do
+SAVE_PATH = "videos_dowloadeds/"
+Search_Text = 'videos detecção'
 video_qtd = 2
 video_links = []
 
@@ -12,7 +13,7 @@ for vid in range(0,video_qtd,1):
 
     # videosSearch = VideosSearch('arrombamento de caixa', limit = video_qtd)
     try:
-        videosSearch = Search('arrombamento de caixa', limit = video_qtd)
+        videosSearch = Search(Search_Text, limit = video_qtd)
         video_links.append(videosSearch.result()['result'][vid]['link'])
 
         print(videosSearch.result()['result'][vid]['link'])
